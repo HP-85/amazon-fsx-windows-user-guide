@@ -17,9 +17,9 @@ You need to add the following `-SessionOption` to your command: `-SessionOption 
 Following are two examples using `-SessionOption` when initiating a remote PowerShell session on your file system\.
 
 ```
-PS C:\Users\delegateadmin> Invoke-Command -ComputerName FSxFileSystem-DNS-Name -ConfigurationName FSxRemoteAdmin -scriptblock {fsx-command} -SessionOption (New-PSSessionOption -uiCulture "en-US")
+PS C:\Users\delegateadmin> Invoke-Command -ComputerName FSxFileSystem-Remote-PowerShell-Endpoint -ConfigurationName FSxRemoteAdmin -scriptblock {fsx-command} -SessionOption (New-PSSessionOption -uiCulture "en-US")
 ```
 
 ```
-PS C:\Users\delegateadmin> Enter-Pssession -ComputerName FSxFileSystem-DNS-Name -ConfigurationName FsxRemoteAdmin -SessionOption (New-PSSessionOption -uiCulture "en-US")
+PS C:\Users\delegateadmin> Enter-Pssession -ComputerName FSxFileSystem-Remote-PowerShell-Endpoint -ConfigurationName FsxRemoteAdmin -SessionOption (New-PSSessionOption -uiCulture "en-US")
 ```
